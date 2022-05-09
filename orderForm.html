@@ -1,0 +1,163 @@
+<!------------------
+
+    Final Project
+    Name: Amanda Schepp
+    Date: April 6th 2022
+    Description: BumbleBee Cafe
+    
+    ------------------->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <title>Order Here</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="FinalProjectAmandaSchepp.css">
+        <script type="text/javascript" src="FinalProjectAmandaSchepp.js"></script>
+    </head>
+
+    <body>
+      <div id="mainheading">
+        <h1>Bumble Bee Cafe</h1>
+        <p>    ~We are Un-Bee-leavably Good!</p>
+    </div>
+    <nav>
+        <ul>
+          <a href="index.html"><li>Home</li></a>
+          <a href="aboutUs.html"><li>Donations</li></a>
+          <a href="orderForm.html"><li>Request Bee-utiful Catering</li></a>
+      </ul>
+  </nav>
+  <h1>Request Catering</h1>
+  <form id="orderform" 
+  action="ThankYou.html" 
+  method="post">
+  <fieldset id="paymentInfo">
+    <div class="left">
+        <a name="shippinginfo"><h3>General Information</h3></a>
+        <ul>
+            <li>
+                <label for="fullname">Full Name</label>
+                <input id="fullname" name="fullname" type="text" />
+                <p class="shippingError error" id="fullname_error">* Required field</p>
+            </li>
+            <li>
+                <label for="address">Address</label>
+                <input id="address" name="address" type="text" />
+                <p class="shippingError error" id="address_error">* Required field</p>
+            </li>
+            <li>
+                <label for="city">City</label>
+                <input id="city" name="city" type="text" />
+                <p class="shippingError error" id="city_error">* Required field</p>
+            </li>
+            <li>
+                <label for="province">Province</label>
+                <select id="province" name="province">
+                    <option value="AB">Alberta</option>
+                    <option value="BC">British Columbia</option>
+                    <option value="MB">Manitoba</option>
+                    <option value="NB">New Brunswick</option>
+                    <option value="NL">Newfoundland and Labrador</option>
+                    <option value="NS">Nova Scotia</option>
+                    <option value="ON">Ontario</option>
+                    <option value="PE">Prince Edward Island</option>
+                    <option value="QC">Quebec</option>
+                    <option value="SK">Saskatchewan</option>
+                    <option value="NT">Northwest Territories</option>
+                    <option value="NU">Nunavut</option>
+                    <option value="YT">Yukon</option>
+                </select>
+                <p class="shippingError error" id="province_error">* Required field</p>
+            </li>
+            <li>
+                <label for="postal">Postal Code</label>
+                <input id="postal" name="postal" type="text" />
+                <p class="shippingError error" id="postal_error">* Required field</p>
+                <p class="shippingError error" id="postalformat_error">* Invalid postal code</p>
+            </li>
+            <li>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text" />
+                <p class="shippingError error" id="email_error">* Required field</p>
+                <p class="shippingError error" id="emailformat_error">* Invalid email address</p>
+            </li>
+        </ul>
+    </div>
+    <div class="right">
+        <h3>Payment Information</h3>                    
+        <fieldset id="cardTypes">
+            <legend>Card Type</legend>
+            <ul>
+                <li>                
+                    <input id="visa" name="cardtype" type="radio" />
+                    <label for="visa">VISA</label>
+                    <input id="amex" name="cardtype" type="radio" />
+                    <label for="amex">AmEx</label>
+                    <input id="mastercard" name="cardtype" type="radio" />
+                    <label for="mastercard">Mastercard</label>
+                    <p class="cardTypeError error" id="cardtype_error">* You must choose a card type</p>    
+                </li>
+            </ul>                   
+        </fieldset>                 
+
+        <fieldset id="cardInfo">
+            <legend>Card Info</legend>
+            <ul>
+                <li>    
+                    <label for="cardname">Name on Card</label>
+                    <input id="cardname" name="cardname" type="text" />
+                    <p class="cardError error" id="cardname_error">* Required field</p>
+                </li>   
+                <li>                            
+                    <label for="month">Expiry Date</label>
+                    <select id="month" name="month">
+                        <option>- Month -</option>
+                        <option value="1">January</option>
+                        <option value="2">February</option>
+                        <option value="3">March</option>
+                        <option value="4">April</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">August</option>
+                        <option value="9">September</option>
+                        <option value="10">October</option>
+                        <option value="11">November</option>
+                        <option value="12">December</option>
+                    </select>
+                    <select id="year" name="year">
+
+                    </select>
+                    <p class="cardError error" id="month_error">* You must choose a month</p>
+                    <p class="cardError error" id="expiry_error">* Invalid expiry date</p>
+                </li>
+                <li>
+                    <label for="cardnumber">Card Number</label>
+                    <input id="cardnumber" name="cardnumber" type="number" />
+                    <p class="cardError error" id="cardnumber_error">* Required field</p>
+                    <p class="cardError error" id="invalidcard_error">* Invalid card number</p>
+                </li>
+            </ul>   
+        </fieldset>
+    </div>
+    <div class="clear"></div>
+    <p class="center">
+        <button type="submit" id="submit">Order Now!</button>
+        <button type="reset" id="clear">Clear Order</button>
+    </p>
+</fieldset>
+</form>
+</body>
+<footer>
+    <div class="fixed-size-container">
+    <div class="fixed-size"><a href="#"><img src="images/logo.png" alt="IMG Not Found:"></a></div>
+    <div class="fixed-size"><a href="#"><img src="images/logo.png" alt="IMG Not Found:"></a></div>
+    <div class="fixed-size"><a href="#"><img src="images/logo.png" alt="IMG Not Found:"></a></div>
+    </div> 
+  <nav>
+      <h5>Copyright © 2021</h5>
+      <h6>  | 5 Granite Ave, Stonewall, MB R0C 2Z0 |</h6>
+  </nav>
+</footer>
+</html>

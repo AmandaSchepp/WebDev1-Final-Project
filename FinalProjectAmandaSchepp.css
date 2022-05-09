@@ -1,0 +1,406 @@
+<!------------------
+
+    Final Project
+    Name: Amanda Schepp
+    Date: April 6th 2022
+    Description: BumbleBee Cafe
+    
+------------------->
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: Helvetica, sans-serif;
+    background: url('images/background.jpg');
+    background-repeat: none;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    color: black;
+}
+
+#mainheading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    margin:0px auto;
+    text-align: center;
+    color: black;
+    background-image: linear-gradient(orange, yellow);
+}
+    
+    #mainheading h1{
+        font-family: Lucida Handwriting;
+        text-shadow: 1px,1px,2px #000;
+
+    }
+
+nav{
+    width: 100%;
+    background-color: black;
+    text-align: center;
+
+}
+
+    nav ul{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+        nav ul a{
+            font-family: Cinzel;
+            color: #CAE4F3;
+            text-decoration: none;
+        }
+
+        nav ul li{
+            border: 1px solid yellow;
+            background-color: black;
+            height: 60px;
+            line-height: 60px;
+            transition: 1s;
+        }
+
+        nav ul li: hover{
+            background-color: yellow;
+        }
+
+section{
+    width: 90%;
+    background-color: #FFF;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid #000032;
+    box-shadow: 1px 1px 2px #333, -1px 1px 2px #333;
+}
+
+    section h1, #content h2{
+        font-family: Cinzel;
+        text-shadow: 1px 1px 2px #333;
+    }
+
+    #content p{
+        margin-bottom: 5px;
+    }
+
+    #Drink{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #Drink img{
+        max-width: 30%;
+        max-height: 30%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    aside h2{
+        background-color: #CAE4F3;
+        color: #FFF;
+        padding-left: 3px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 20px;
+
+    }
+
+    #Drink aside h2{
+        background-color: #CAE4F3;
+        color: #FFF;
+        padding-left: 3px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 20px;
+
+    }
+    #Drink aside p img.NectarTea, aside p img.HoneyCoffee, aside p img.StingingMocha {
+        float: right;
+        padding: 2px;
+        border: 1px solid #36454F;
+        max-width: 10%;
+        max-height: 10%;
+    }
+
+
+    aside p img.NectarTea, aside p img.HoneyCoffee, aside p img.StingingMocha {
+        float: right;
+        padding: 2px;
+        border: 1px solid #36454F;
+        max-width: 10%;
+        max-height: 10%;
+    }
+
+.fixed-size-container {
+  max-width: 1400px;
+  margin: 50px auto 0 auto;
+  background-color: transparent;
+  padding: 3px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+@media(min-width: 640px){
+
+    #mainheading{
+            height:180px;
+    }
+    #mainheading h1{
+        font-size: 2.6em;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: nowrap; 
+    }
+
+        nav ul li{
+            border: none;
+            transition: none;
+        }
+
+        nav ul a{
+            transition: 1s;
+        }
+
+        nav ul a:hover{
+            color: yellow;
+        }
+
+        nav ul li: hover{
+            background-color: #777;
+        }
+
+        #content{
+            display: flex;
+        }
+            #content article{
+                flex: 3;
+            }
+            #content aside{
+                flex: 1;
+            }
+
+}
+footer{
+     background-color: transparent;
+}
+footer div{
+    background-color: transparent;
+}
+
+footer nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    color: #CAE4F3;
+    background-color: transparent;
+    border: white;
+}
+
+footer img{
+    max-width: 50%;
+    max-height: 50%;
+    background-color: transparent;
+}
+fieldset{
+    background-color: white;
+}
+
+fieldset#orderInfo, fieldset#paymentInfo { 
+    border-radius: 10px;
+    margin:15px auto;
+    box-shadow: 2px 2px 4px #CCC, -2px -2px 4px #CCC; 
+}
+
+fieldset#cardTypes, fieldset#cardInfo {
+    border-radius: 10px;
+}
+#paymentInfo .left {
+    float: left;
+    width: 50%;
+}
+
+#paymentInfo .right {
+    float: right;
+    width: 50%;
+}
+
+#paymentInfo h3 {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+#paymentInfo .left ul li {
+    width:90%;
+    /*background: #EEE;*/
+    /*border:1px solid black;*/
+    border-radius: 5px;
+    padding:8px 10px;
+    box-sizing:border-box;
+    margin: 0px auto;
+}
+
+#paymentInfo .left label {
+    display: inline-block;
+    width:100px;
+    margin-top: 2px;
+}
+
+#paymentInfo .left input {
+    display: inline-block;  
+    width:50%;
+    height:26px;
+    padding-left: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+#paymentInfo .left select {
+    display: inline-block;  
+    height:30px;
+    padding-left: 5px;
+    font-size: 14px;
+    line-height: 26px;
+    padding-top: 3px;
+    color: #333;
+}
+
+#gotoShipping {
+    margin-left: 15px;
+    width: 90%;
+    font-size: .8em;
+}
+
+#gotoShipping a:link, #gotoShipping a:visited {
+    color: blue;
+}
+
+#gotoShipping a:hover, #gotoShipping a:focus {
+    text-decoration: none;
+}
+
+#cardTypes, #cardInfo {
+    margin-top: 40px;
+}
+
+#cardTypes ol li {
+    padding-top: 10px;
+    text-align: center;
+}
+
+#cardTypes label {
+    background: none no-repeat left 50%;
+    line-height: 20px;
+    padding: 0px 0px 0px 30px;
+    width: auto;
+    margin-right: 15px;
+}
+
+#cardTypes input {
+    margin-left: 25px;
+}
+
+#cardTypes label:hover{
+    cursor: pointer;
+}
+
+#cardInfo input {
+    display: inline-block;  
+    width: 50%;
+    height: 26px;
+    padding-left: 5px;
+    font-size: 14px;
+    color: #333;
+} 
+
+#cardInfo select {
+    display: inline-block;  
+    height:30px;
+    padding-left: 5px;
+    font-size: 14px;
+    line-height: 26px;
+    padding-top: 3px;
+    color: #333;
+}
+
+#cardInfo li{ 
+    width: 90%;
+    /*background: #EEE;
+    border: 1px solid black;
+    border-radius: 5px;*/
+    padding: 8px 10px;
+    box-sizing: border-box;
+    margin: 0px auto;
+}
+
+#cardInfo label{
+    display: inline-block;
+    width:120px;
+    margin-top: 2px;
+}
+
+.error {
+    color: red;
+}
+
+.shippingError {
+    margin-left: 110px;
+}
+
+.cardError {
+    margin-left: 130px;
+}
+
+.cardTypeError {
+    margin-left: 30px;
+}
+
+/* End of Error Styles 8?
+
+/* Submit Button */
+
+#submit, #clear{
+    /*display: block;
+    background:#C1F0F6;
+    color:#000;
+    border:none;
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px #000;
+    font-size: 1.1em;
+    margin:3px auto;
+    height: 40px;
+    width:160px;
+    float:right;*/
+    height: 36px;
+    color: #333;
+    margin-top: 8px;
+    font-size: 16px;
+}
+
+#submit {
+    margin-right: 15px;
+}
+
+#submit:hover, #clear:hover {
+    /*box-shadow: 2px 2px 2px #000;*/
+    cursor: pointer;
+}
